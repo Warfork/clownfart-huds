@@ -1,0 +1,34 @@
+if %WEAPON_ITEM
+/*	Wipeout weapon icons
+setCustomWeaponIcons #ITEM_GUNBLADE 1 gfx/hud/clownhud/weapons/gunblade
+setCustomWeaponIcons #ITEM_MACHINEGUN 1 gfx/hud/clownhud/weapons/machinegun
+setCustomWeaponIcons #ITEM_RIOTGUN 1 gfx/hud/clownhud/weapons/riot
+setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 gfx/hud/clownhud/weapons/grenade
+setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/clownhud/weapons/rocket
+setCustomWeaponIcons #ITEM_PLASMAGUN 1 gfx/hud/clownhud/weapons/plasma
+setCustomWeaponIcons #ITEM_LASERGUN 1 gfx/hud/clownhud/weapons/laser
+setCustomWeaponIcons #ITEM_ELECTROBOLT 1 gfx/hud/clownhud/weapons/electro
+*/
+setAlign 2 2
+setCursor 0.5 * #WIDTH + 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 520
+
+//drawWeaponIcons 48 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 38 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 38
+drawWeaponIcons 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 38 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 38
+
+moveCursor 0 -24
+//drawWeaponStrongAmmo 48 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponStrongAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponStrongAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponStrongAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponStrongAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponStrongAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+
+moveCursor 0 48
+//drawWeaponWeakAmmo 48 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponWeakAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponWeakAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponWeakAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponWeakAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+drawWeaponWeakAmmo 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 10
+
+endif 

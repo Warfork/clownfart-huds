@@ -1,0 +1,139 @@
+//numbers
+setAlign 2 2
+setCursor #WIDTH / 2, #HEIGHT - 70
+setSize 36 36
+setColor 1 1 1 1
+
+if %ARMOR <= %HEALTH * 3
+if 50 >= %HEALTH + %ARMOR * 0.66
+setColor 1 0 0 1
+endif
+endif
+if %ARMOR > %HEALTH * 3
+if 50 >= %HEALTH * 3
+setColor 1 0 0 1
+endif
+endif
+
+if %ARMOR <= %HEALTH * 3
+if 100 >= %HEALTH + %ARMOR * 0.66
+if 50 < %HEALTH + %ARMOR * 0.66
+setColor 1 0.5 0 1
+endif
+endif
+endif
+if %ARMOR > %HEALTH * 3
+if 100 >= %HEALTH * 3
+if 50 < %HEALTH * 3
+setColor 1 0.5 0 1
+endif
+endif
+endif
+
+if %ARMOR <= %HEALTH * 3
+if 150 >= %HEALTH + %ARMOR * 0.66
+if 100 < %HEALTH + %ARMOR * 0.66
+setColor 1 1 0 1
+endif
+endif
+endif
+if %ARMOR > %HEALTH * 3
+if 150 >= %HEALTH * 3
+if 100 < %HEALTH * 3
+setColor 1 1 0 1
+endif
+endif
+endif
+
+if %ARMOR <= %HEALTH * 3
+if 200 >= %HEALTH + %ARMOR * 0.66
+if 150 < %HEALTH + %ARMOR * 0.66
+setColor 0 1 0 1
+endif
+endif
+endif
+if %ARMOR > %HEALTH * 3
+if 200 >= %HEALTH * 3
+if 150 < %HEALTH * 3
+setColor 0 1 0 1
+endif
+endif
+endif
+
+if %ARMOR <= %HEALTH * 3
+if 250 >= %HEALTH + %ARMOR * 0.66
+if 200 < %HEALTH + %ARMOR * 0.66
+setColor 0 0.6 1 1
+endif
+endif
+endif
+
+if %ARMOR <= %HEALTH * 3
+if 300 >= %HEALTH + %ARMOR * 0.66
+if 250 < %HEALTH + %ARMOR * 0.66
+setColor 1 0 1 1
+endif
+endif
+endif
+
+if %ARMOR <= %HEALTH * 3
+if 350 >= %HEALTH + %ARMOR * 0.66
+if 300 < %HEALTH + %ARMOR * 0.66
+setColor 1 1 1 1
+endif
+endif
+endif
+
+// true stack = %health + (%armor * .66), if %armor(the actual armor number,i.e., not with the .66 modifier) is equal to or less than 3 * %health
+// if %armor is greater than 3 * %health, then true stack = 3 * %health
+if %ARMOR <= %HEALTH * 3
+drawNum %HEALTH + %ARMOR * 0.66
+endif
+if %ARMOR > %HEALTH * 3
+drawNum %HEALTH * 3
+endif
+
+setSize 33 33
+//health
+if %HEALTH > 0
+if %HEALTH <= 25
+	setColor 0.85 0.05 0.05 1
+endif
+endif
+if %HEALTH > 25
+if %HEALTH <= 50
+	setColor 1 0.3 0 1
+endif
+endif
+if %HEALTH > 50
+if %HEALTH <= 100
+	setColor 0.8 0.7 0 1
+endif
+endif
+if %HEALTH > 100
+	setColor 0 0.6 1 1
+endif
+setAlign 3 2
+setCursor #WIDTH / 2, #HEIGHT - 70
+moveCursor -54 0
+drawNum %HEALTH
+
+//armor
+if %ARMOR > 0
+if %ARMOR < 95
+	setColor 0.2 0.6 0.2 1
+endif
+endif
+if %ARMOR >= 95
+if %ARMOR < 125
+	setColor 0.8 0.7 0 1
+endif
+endif
+if %ARMOR >= 125
+	setColor 0.85 0.05 0.05 1
+endif
+setAlign 1 2
+moveCursor 108 0
+if %ARMOR > 0
+	drawNum %ARMOR
+endif

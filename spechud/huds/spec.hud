@@ -1,0 +1,29 @@
+// maybe make selected weapon orange when strong ammo
+
+/* misc shit */
+include spec/zoom
+include spec/damage_indicator_screen
+include crosshair
+
+
+/* bottom bar */
+if %TEAM != #TEAM_SPECTATOR
+include spec/bar
+include spec/bar_numbers
+//include spec/weaponlist_right
+include spec/weaponlist
+endif
+
+/* top bar */
+include spec/stunned
+include spec/top_bar
+include spec/scores
+include spec/clock
+//include spec/top_bar_candy
+
+include spec/awards
+include spec/chasing
+include spec/chat
+include spec/obituaries
+include spec/item_timers
+include spec/net

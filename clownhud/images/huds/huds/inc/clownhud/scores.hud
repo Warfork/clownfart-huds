@@ -1,0 +1,94 @@
+if %MATCH_STATE != #MATCH_STATE_WARMUP
+//
+//rewrite
+//
+if %INDIVIDUAL != 1
+	setSize 24 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 24
+	if %TEAM == #TEAM_ALPHA
+		setAlign 3 1
+		setCursor #WIDTH / 2, 5
+		moveCursor -16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		setColorToTeamColor #TEAM_ALPHA
+		drawNum %TEAM_ALPHA_SCORE
+		
+		setAlign 1 1
+		setCursor #WIDTH / 2, 5
+		moveCursor 16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		setColorToTeamColor #TEAM_BETA
+		drawNum %TEAM_BETA_SCORE
+	endif
+	if %TEAM == #TEAM_BETA
+		setAlign 3 1
+		setCursor #WIDTH / 2, 5
+		moveCursor -16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		setColorToTeamColor #TEAM_BETA
+		drawNum %TEAM_BETA_SCORE
+		
+		setAlign 1 1
+		setCursor #WIDTH / 2, 5
+		moveCursor 16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		setColorToTeamColor #TEAM_ALPHA
+		drawNum %TEAM_ALPHA_SCORE
+	endif
+
+	setCursor #WIDTH / 2, 5
+	setAlign 2 1
+	if %TEAM == #TEAM_ALPHA
+		if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
+			setColorToTeamColor #TEAM_BETA
+			drawPicByName gfx/hud/clownhud/lessthan
+		endif
+		if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
+			setColorToTeamColor #TEAM_ALPHA
+			drawPicByName gfx/hud/clownhud/greaterthan
+		endif
+		if %TEAM_ALPHA_SCORE == %TEAM_BETA_SCORE
+			setColor 1 1 0.6 1
+			drawPicByName gfx/hud/clownhud/equal
+		endif
+	endif
+	if %TEAM == #TEAM_BETA
+		if %TEAM_BETA_SCORE < %TEAM_ALPHA_SCORE
+			setColorToTeamColor #TEAM_ALPHA
+			drawPicByName gfx/hud/clownhud/lessthan
+		endif
+		if %TEAM_BETA_SCORE > %TEAM_ALPHA_SCORE
+			setColorToTeamColor #TEAM_BETA
+			drawPicByName gfx/hud/clownhud/greaterthan
+		endif
+		if %TEAM_BETA_SCORE == %TEAM_ALPHA_SCORE
+			setColor 1 1 0.6 1
+			drawPicByName gfx/hud/clownhud/equal
+		endif
+	endif
+endif
+//
+//rewrite
+//
+
+if %INDIVIDUAL 
+	setSize 24 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 24
+	setAlign 2 1
+	//setCursor #WIDTH / 2, 34
+	setCursor #WIDTH / 2, 5
+	setColor 1 1 0.6 1
+	if %TEAM == #TEAM_ALPHA
+		if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
+			setColorToTeamColor #TEAM_BETA
+		endif
+		if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
+			setColorToTeamColor #TEAM_ALPHA
+		endif
+		drawNum %TEAM_ALPHA_SCORE - %TEAM_BETA_SCORE
+	endif
+	if %TEAM == #TEAM_BETA
+		if %TEAM_BETA_SCORE < %TEAM_ALPHA_SCORE
+			setColorToTeamColor #TEAM_ALPHA
+		endif
+		if %TEAM_BETA_SCORE > %TEAM_ALPHA_SCORE
+			setColorToTeamColor #TEAM_BETA
+		endif
+		drawNum %TEAM_BETA_SCORE - %TEAM_ALPHA_SCORE
+	endif
+endif
+endif 

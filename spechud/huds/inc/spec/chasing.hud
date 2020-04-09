@@ -1,0 +1,15 @@
+if %CHASING != #NOTSET
+	setFont "virtue_10"
+	if %VIDWIDTH >= 1152
+		setSize 280, 340
+		setFont "virtue_12"
+		if %VIDWIDTH > 1280
+			setSize 300, 340
+			setFont "virtue_16"
+		endif
+	endif
+	setColor 1.0 1.0 1.0 0.8
+	setAlign 2 1
+	setCursor 400 100
+	drawPlayername %CHASING
+endif

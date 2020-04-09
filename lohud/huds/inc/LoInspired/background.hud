@@ -1,0 +1,26 @@
+setCursor #WIDTH / 2, #HEIGHT
+setColor 1 1 1 0.3
+if %HEALTH > 100
+	setColor 0 0.6 1 0.3
+endif
+setAlign 2 3
+setSize 330 165
+drawPicByName gfx/hud/loinspired/lo.tga
+
+// if stunned draw red outline
+if %STUNNED
+	setColor 1 0 0 0.6
+	drawPicByName gfx/hud/loinspired/lo_border
+endif
+
+setAlign 2 2
+setCursor #WIDTH / 2, #HEIGHT - 25
+setSize 310 40
+setColor 0 0 0 0.4
+drawPicByName gfx/ui/white
+
+setAlign 2 2
+setCursor #WIDTH / 2, #HEIGHT - 70
+setSize 310 40
+setColor 0 0 0 0.4
+drawPicByName gfx/ui/white

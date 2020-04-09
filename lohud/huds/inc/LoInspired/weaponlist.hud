@@ -1,0 +1,9 @@
+setAlign 2 2
+setCursor 420, #HEIGHT - 25
+drawWeaponIcons 40 0 36 36
+
+moveCursor 0 -11
+drawWeaponStrongAmmo 40 0 14
+
+moveCursor 0 22
+drawWeaponWeakAmmo 40 0 14

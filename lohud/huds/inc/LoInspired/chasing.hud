@@ -1,0 +1,7 @@
+if %CHASING != #NOTSET
+	setFont "virtue_12"
+	setColor 1 1 1 0.8
+	setAlign 2 1
+	setCursor 400 50
+	drawPlayerName %CHASING
+endif

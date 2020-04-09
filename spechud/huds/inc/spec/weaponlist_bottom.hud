@@ -1,0 +1,227 @@
+if %TEAM != #TEAM_SPECTATOR
+if %WEAPON_ITEM
+if %INSTAGIB == 0
+	setCustomWeaponSelect huds/inc/spec/gfx/blank
+	//Draws background for weaponlist. 
+	setCustomWeaponIcons #ITEM_GUNBLADE 1 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_MACHINEGUN 1 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_RIOTGUN 1 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_PLASMAGUN 1 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_LASERGUN 1 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_ELECTROBOLT 1 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_GUNBLADE 0 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_MACHINEGUN 0 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_RIOTGUN 0 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_PLASMAGUN 0 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_LASERGUN 0 huds/inc/spec/gfx/grad_h
+	setCustomWeaponIcons #ITEM_ELECTROBOLT 0 huds/inc/spec/gfx/grad_h
+	
+	setAlign 2 2
+	setCursor 30 + #WIDTH / 1.3, #HEIGHT - 35
+	
+	//draw bg for solid list
+	drawWeaponIcons 35 0 50 58
+	drawWeaponIcons 35 0 50 58
+	drawWeaponIcons 35 0 50 58
+	drawWeaponIcons 35 0 50 58
+	drawWeaponIcons 35 0 50 58
+	
+	if %PICKUP_ITEM
+		// Draws up arrow in weaponlist when gun is picked up.
+		if %PICKUP_ITEM == #ITEM_MACHINEGUN
+			setCustomWeaponIcons #ITEM_MACHINEGUN 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_RIOTGUN
+			setCustomWeaponIcons #ITEM_RIOTGUN 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_GRENADE_LAUNCHER
+			setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_ROCKET_LAUNCHER
+			setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_PLASMAGUN
+			setCustomWeaponIcons #ITEM_PLASMAGUN 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_LASERGUN
+			setCustomWeaponIcons #ITEM_LASERGUN 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_ELECTROBOLT
+			setCustomWeaponIcons #ITEM_ELECTROBOLT 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		
+		// Draws + in weaponlist when ammo is picked up.
+/* 		if %PICKUP_ITEM == #ITEM_BULLETS
+			setCustomWeaponIcons #ITEM_MACHINEGUN 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_SHELLS
+			setCustomWeaponIcons #ITEM_RIOTGUN 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_GRENADES
+			setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_ROCKETS
+			setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_PLASMA
+			setCustomWeaponIcons #ITEM_PLASMAGUN 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_LASERS
+			setCustomWeaponIcons #ITEM_LASERGUN 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif
+		if %PICKUP_ITEM == #ITEM_BOLTS
+			setCustomWeaponIcons #ITEM_ELECTROBOLT 1 huds/inc/spec/gfx/grad_h_pickup_gun
+		endif */
+	endif
+	//nogun
+	setCustomWeaponIcons #ITEM_GUNBLADE 0 huds/inc/spec/gfx/grad_h_nogun
+	setCustomWeaponIcons #ITEM_MACHINEGUN 0 huds/inc/spec/gfx/grad_h_nogun
+	setCustomWeaponIcons #ITEM_RIOTGUN 0 huds/inc/spec/gfx/grad_h_nogun
+	setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 huds/inc/spec/gfx/grad_h_nogun
+	setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 huds/inc/spec/gfx/grad_h_nogun
+	setCustomWeaponIcons #ITEM_PLASMAGUN 0 huds/inc/spec/gfx/grad_h_nogun
+	setCustomWeaponIcons #ITEM_LASERGUN 0 huds/inc/spec/gfx/grad_h_nogun
+	setCustomWeaponIcons #ITEM_ELECTROBOLT 0 huds/inc/spec/gfx/grad_h_nogun
+	
+	drawWeaponIcons 39 0 37 58
+	
+	//blah
+	setCustomWeaponIcons #ITEM_GUNBLADE 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_MACHINEGUN 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_RIOTGUN 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_PLASMAGUN 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_LASERGUN 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_ELECTROBOLT 1 huds/inc/spec/gfx/blank
+	//nogun
+	setCustomWeaponIcons #ITEM_GUNBLADE 0 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_MACHINEGUN 0 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_RIOTGUN 0 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_PLASMAGUN 0 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_LASERGUN 0 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_ELECTROBOLT 0 huds/inc/spec/gfx/blank
+	
+	// Draws selected weapon shit
+	if %PENDING_WEAPON == #ITEM_GUNBLADE
+		setCustomWeaponIcons #ITEM_GUNBLADE 1 huds/inc/spec/gfx/grad_h_selected
+		setCustomWeaponIcons #ITEM_GUNBLADE 0 huds/inc/spec/gfx/grad_h_selected
+	endif
+	if %PENDING_WEAPON == #ITEM_MACHINEGUN
+		setCustomWeaponIcons #ITEM_MACHINEGUN 1 huds/inc/spec/gfx/grad_h_selected
+		setCustomWeaponIcons #ITEM_MACHINEGUN 0 huds/inc/spec/gfx/grad_h_selected
+	endif
+	if %PENDING_WEAPON == #ITEM_RIOTGUN
+		setCustomWeaponIcons #ITEM_RIOTGUN 1 huds/inc/spec/gfx/grad_h_selected
+		setCustomWeaponIcons #ITEM_RIOTGUN 0 huds/inc/spec/gfx/grad_h_selected
+	endif
+	if %PENDING_WEAPON == #ITEM_GRENADE_LAUNCHER
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 huds/inc/spec/gfx/grad_h_selected
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 huds/inc/spec/gfx/grad_h_selected
+	endif
+	if %PENDING_WEAPON == #ITEM_ROCKET_LAUNCHER
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 huds/inc/spec/gfx/grad_h_selected
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 huds/inc/spec/gfx/grad_h_selected
+	endif
+	if %PENDING_WEAPON == #ITEM_PLASMAGUN
+		setCustomWeaponIcons #ITEM_PLASMAGUN 1 huds/inc/spec/gfx/grad_h_selected
+		setCustomWeaponIcons #ITEM_PLASMAGUN 0 huds/inc/spec/gfx/grad_h_selected
+	endif
+	if %PENDING_WEAPON == #ITEM_LASERGUN
+		setCustomWeaponIcons #ITEM_LASERGUN 1 huds/inc/spec/gfx/grad_h_selected
+		setCustomWeaponIcons #ITEM_LASERGUN 0 huds/inc/spec/gfx/grad_h_selected
+	endif
+	if %PENDING_WEAPON == #ITEM_ELECTROBOLT
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 1 huds/inc/spec/gfx/grad_h_selected
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 0 huds/inc/spec/gfx/grad_h_selected
+	endif
+	drawWeaponIcons 39 0 37 58
+	drawWeaponIcons 39 0 37 58
+	drawWeaponIcons 39 0 37 58
+	drawWeaponIcons 39 0 37 58
+	
+	moveCursor 0 -21
+	drawWeaponStrongAmmo 39 0 12
+	drawWeaponStrongAmmo 39 0 12
+	drawWeaponStrongAmmo 39 0 12
+	drawWeaponStrongAmmo 39 0 12
+	moveCursor 0 42
+	drawWeaponWeakAmmo 39 0 12
+	drawWeaponWeakAmmo 39 0 12
+	drawWeaponWeakAmmo 39 0 12
+	drawWeaponWeakAmmo 39 0 12
+	
+	//setCustomWeaponSelect huds/inc/spec/gfx/selected_lowres
+	
+	
+	//Draws custom icons for weaponlist. 
+	setCustomWeaponIcons #ITEM_GUNBLADE 1 huds/inc/spec/gfx/weapon/gunblade_lowres
+	setCustomWeaponIcons #ITEM_MACHINEGUN 1 huds/inc/spec/gfx/weapon/machinegun_lowres
+	setCustomWeaponIcons #ITEM_RIOTGUN 1 huds/inc/spec/gfx/weapon/riot_lowres
+	setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 huds/inc/spec/gfx/weapon/grenade_lowres
+	setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 huds/inc/spec/gfx/weapon/rocket_lowres
+	setCustomWeaponIcons #ITEM_PLASMAGUN 1 huds/inc/spec/gfx/weapon/plasma_lowres
+	setCustomWeaponIcons #ITEM_LASERGUN 1 huds/inc/spec/gfx/weapon/laser_lowres
+	setCustomWeaponIcons #ITEM_ELECTROBOLT 1 huds/inc/spec/gfx/weapon/electro_lowres
+	//nogun
+	setCustomWeaponIcons #ITEM_GUNBLADE 0 huds/inc/spec/gfx/weapon/gunblade_lowres
+	setCustomWeaponIcons #ITEM_MACHINEGUN 0 huds/inc/spec/gfx/weapon/machinegun_lowres
+	setCustomWeaponIcons #ITEM_RIOTGUN 0 huds/inc/spec/gfx/weapon/riot_lowres
+	setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 huds/inc/spec/gfx/weapon/grenade_lowres
+	setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 huds/inc/spec/gfx/weapon/rocket_lowres
+	setCustomWeaponIcons #ITEM_PLASMAGUN 0 huds/inc/spec/gfx/weapon/plasma_lowres
+	setCustomWeaponIcons #ITEM_LASERGUN 0 huds/inc/spec/gfx/weapon/laser_lowres
+	setCustomWeaponIcons #ITEM_ELECTROBOLT 0 huds/inc/spec/gfx/weapon/electro_lowres
+
+	setCursor 30 + #WIDTH / 1.3, #HEIGHT - 35
+	drawWeaponIcons 39 0 30 30
+	
+	// Draws + in weaponlist when ammo is picked up.
+	setCustomWeaponIcons #ITEM_GUNBLADE 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_MACHINEGUN 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_RIOTGUN 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_PLASMAGUN 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_LASERGUN 1 huds/inc/spec/gfx/blank
+	setCustomWeaponIcons #ITEM_ELECTROBOLT 1 huds/inc/spec/gfx/blank
+	
+	// Draws second selected weapon to pz opacity
+	if %PENDING_WEAPON == #ITEM_GUNBLADE
+		setCustomWeaponIcons #ITEM_GUNBLADE 1 huds/inc/spec/gfx/weapon/gunblade_lowres
+	endif
+	if %PENDING_WEAPON == #ITEM_MACHINEGUN
+		setCustomWeaponIcons #ITEM_MACHINEGUN 1 huds/inc/spec/gfx/weapon/machinegun_lowres
+	endif
+	if %PENDING_WEAPON == #ITEM_RIOTGUN
+		setCustomWeaponIcons #ITEM_RIOTGUN 1 huds/inc/spec/gfx/weapon/riot_lowres
+	endif
+	if %PENDING_WEAPON == #ITEM_GRENADE_LAUNCHER
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 huds/inc/spec/gfx/weapon/grenade_lowres
+	endif
+	if %PENDING_WEAPON == #ITEM_ROCKET_LAUNCHER
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 huds/inc/spec/gfx/weapon/rocket_lowres
+	endif
+	if %PENDING_WEAPON == #ITEM_PLASMAGUN
+		setCustomWeaponIcons #ITEM_PLASMAGUN 1 huds/inc/spec/gfx/weapon/plasma_lowres
+	endif
+	if %PENDING_WEAPON == #ITEM_LASERGUN
+		setCustomWeaponIcons #ITEM_LASERGUN 1 huds/inc/spec/gfx/weapon/laser_lowres
+	endif
+	if %PENDING_WEAPON == #ITEM_ELECTROBOLT
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 1 huds/inc/spec/gfx/weapon/electro_lowres
+	endif
+	
+	drawWeaponIcons 39 0 30 30
+	drawWeaponIcons 39 0 30 30
+	drawWeaponIcons 39 0 30 30
+	drawWeaponIcons 39 0 30 30
+endif
+endif
+endif

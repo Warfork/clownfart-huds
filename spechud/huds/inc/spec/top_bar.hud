@@ -1,0 +1,11 @@
+setCursor #WIDTH / 2, 0
+setAlign 2 1
+setSize 800 92
+setColor .8 .8 .8 1
+drawPicByName "huds/inc/spec/gfx/topbar"
+
+setSize 191 85
+setColor 0 0 0 1
+drawPicByName "huds/inc/spec/gfx/topbar_clock_bg"
+setColor 1 1 1 0.35
+drawPicByName "huds/inc/spec/gfx/topbar_clock_bg_candy"

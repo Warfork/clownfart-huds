@@ -1,0 +1,62 @@
+setCursor #WIDTH / 2, #HEIGHT - 125
+setAlign 2 2
+setSize 310 60
+setColor 0 0 0 0.4
+drawPicByName gfx/ui/white
+
+setColor 1 1 1 0.5
+setFont elementalend_40
+if %VIDHEIGHT >= 480
+setCursor #WIDTH / 2, #HEIGHT - 163
+setFont elementalend_40
+	if %VIDHEIGHT >= 600
+	setCursor #WIDTH / 2, #HEIGHT - 164
+	setFont elementalend_50
+		if %VIDHEIGHT >= 720
+		setCursor #WIDTH / 2, #HEIGHT - 162
+		setFont elementalend_60
+			if %VIDHEIGHT >= 768
+			setCursor #WIDTH / 2, #HEIGHT - 164
+			setFont elementalend_65
+				if %VIDHEIGHT >= 800
+				setCursor #WIDTH / 2, #HEIGHT - 165
+				setFont elementalend_70
+					if %VIDHEIGHT >= 900
+					setCursor #WIDTH / 2, #HEIGHT - 164
+					setFont elementalend_75
+						if %VIDHEIGHT >= 960
+						setCursor #WIDTH / 2, #HEIGHT - 164
+						setFont elementalend_80
+							if %VIDHEIGHT >= 1024
+							setCursor #WIDTH / 2, #HEIGHT - 164
+							setFont elementalend_85
+								if %VIDHEIGHT >= 1050
+								setCursor #WIDTH / 2, #HEIGHT - 164
+								setFont elementalend_90
+									if %VIDHEIGHT >= 1080
+									setCursor #WIDTH / 2, #HEIGHT - 166
+									setFont elementalend_95
+										if %VIDHEIGHT >= 1200
+										setCursor #WIDTH / 2, #HEIGHT - 164
+										setFont elementalend_100
+										endif
+									endif
+								endif
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif
+endif
+drawClock
+
+//draws Warmup
+if %MATCH_STATE == #MATCH_STATE_WARMUP
+	setFont "virtue_12"
+	setAlign 2 2
+	setCursor 400 125
+	setColor 0.4 1 0.4 0.5
+	drawString Warmup
+endif

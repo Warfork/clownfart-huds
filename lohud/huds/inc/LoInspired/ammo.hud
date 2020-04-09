@@ -1,0 +1,117 @@
+setAlign 1 3
+setCursor #WIDTH / 2, #HEIGHT - 95
+moveCursor -155 0
+setSize 12.5 60
+setColor 0 0 0 0.4
+drawPicByName gfx/hud/lo_ammo_bar.tga
+if %WEAPON_ITEM == #WEAP_GUNBLADE
+	setColor 1 1 1 1
+	drawPicBar %AMMO 10 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_RIOTGUN
+	setColor 1 0.3 0 1
+	drawPicBar %AMMO 10 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_GRENADELAUNCHER
+	setColor 0 0 1 1
+	drawPicBar %AMMO 10 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_ROCKETLAUNCHER
+	setColor 1 0 0 1
+	drawPicBar %AMMO 10 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_PLASMAGUN
+	setColor 0 1 0 1
+	drawPicBar %AMMO 70 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_LASERGUN
+	setColor 1 1 0 1
+	drawPicBar %AMMO 100 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_ELECTROBOLT
+	setColor 0 1 1 1
+	drawPicBar %AMMO 5 gfx/hud/lo_ammo_bar.tga
+endif
+
+setAlign 3 3
+setCursor #WIDTH / 2, #HEIGHT - 95
+moveCursor 155 0
+setColor 0 0 0 0.4
+drawPicByName gfx/hud/lo_ammo_bar.tga
+if %WEAPON_ITEM == #WEAP_MACHINEGUN
+	setColor 0.5 0.5 0.5 1
+	drawPicBar %WEAK_AMMO 100 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_RIOTGUN
+	setColor 1 0.3 0 1
+	drawPicBar %WEAK_AMMO 15 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_GRENADELAUNCHER
+	setColor 0 0 1 1
+	drawPicBar %WEAK_AMMO 15 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_ROCKETLAUNCHER
+	setColor 1 0 0 1
+	drawPicBar %WEAK_AMMO 10 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_PLASMAGUN
+	setColor 0 1 0 1
+	drawPicBar %WEAK_AMMO 125 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_LASERGUN
+	setColor 1 1 0 1
+	drawPicBar %WEAK_AMMO 175 gfx/hud/lo_ammo_bar.tga
+endif
+if %WEAPON_ITEM == #WEAP_ELECTROBOLT
+	setColor 0 1 1 1
+	drawPicBar %WEAK_AMMO 10 gfx/hud/lo_ammo_bar.tga
+endif
+
+// low ammo warning
+moveCursor -304 -40
+setAlign 2 2
+setSize 14 26
+setColor 1 0 0 1
+if %WEAPON_ITEM == #WEAP_MACHINEGUN
+	if 15 > %WEAK_AMMO + %AMMO
+		if 0 < %WEAK_AMMO + %AMMO
+			drawPicByName gfx/hud/low
+			moveCursor 304 0
+			drawPicByName gfx/hud/low
+		endif
+	endif
+endif
+
+if %WEAPON_ITEM == #WEAP_PLASMAGUN
+	if 15 > %WEAK_AMMO + %AMMO
+		if 0 < %WEAK_AMMO + %AMMO
+			drawPicByName gfx/hud/low
+			moveCursor 310 0
+			drawPicByName gfx/hud/low
+		endif
+	endif
+endif
+if %WEAPON_ITEM == #WEAP_LASERGUN
+	if 20 > %WEAK_AMMO + %AMMO
+		if 0 < %WEAK_AMMO + %AMMO
+			drawPicByName gfx/hud/low
+			moveCursor 310 0
+			drawPicByName gfx/hud/low
+		endif
+	endif
+endif
+if %WEAPON_ITEM != #WEAP_GUNBLADE
+if %WEAPON_ITEM != #WEAP_MACHINEGUN
+if %WEAPON_ITEM != #WEAP_PLASMAGUN
+if %WEAPON_ITEM != #WEAP_LASERGUN
+	if 3 >= %WEAK_AMMO + %AMMO
+		if 0 < %WEAK_AMMO + %AMMO
+			drawPicByName gfx/hud/low
+			moveCursor 298 0
+			drawPicByName gfx/hud/low
+		endif
+	endif
+endif
+endif
+endif
+endif

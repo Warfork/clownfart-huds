@@ -1,0 +1,22 @@
+
+
+include crosshair
+include awards
+include keystate
+include net
+include LoInspired/speed
+include LoInspired/minimap
+include LoInspired/chasing
+include LoInspired/scores
+include LoInspired/fps
+include LoInspired/obituaries
+if %TEAM != #TEAM_SPECTATOR
+include LoInspired/background
+include LoInspired/healtharmor
+include LoInspired/weaponlist
+include LoInspired/clock
+//include LoInspired/ammo
+include LoInspired/powerups
+endif
+include LoInspired/team_info
+include LoInspired/download

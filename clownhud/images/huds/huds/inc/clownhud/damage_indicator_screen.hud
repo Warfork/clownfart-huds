@@ -1,0 +1,9 @@
+precache gfx/hud/damage_down
+setAlign 1 1
+setColor 1 1 1 1
+if %DAMAGE_INDICATOR_BOTTOM > 0
+	setColorAlpha %DAMAGE_INDICATOR_BOTTOM / 1000
+	setCursor 0, #HEIGHT - #HEIGHT / 4
+	setSize #WIDTH, #HEIGHT / 4
+	drawPicByName gfx/hud/damage_down
+endif
